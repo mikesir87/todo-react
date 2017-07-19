@@ -38,7 +38,7 @@ class TodoItem extends React.Component {
         </div>
         <div className="col-xs-3">
           <button type="button" className="btn btn-danger" onClick={() => handleDelete(index)}>
-            删除
+            Remove 
           </button>
         </div>
       </div>
@@ -145,7 +145,7 @@ class Header extends React.Component {
     const completedList = this.props.todoList.filter(TodoFilters[VisibilityFilters.SHOW_ACTIVE]);
     return (
       <div className="jumbotron text-center">
-        <h1>Im a Todo-aholic
+        <h1>My Todo List&nbsp;&nbsp;
           <span className="label label-info">{completedList.length}</span>
         </h1>
       </div>

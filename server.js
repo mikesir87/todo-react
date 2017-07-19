@@ -5,7 +5,7 @@ import bodyParser from 'body-parser';
 import methodOverride from 'method-override';
 import router from './router';
 
-mongoose.connect('mongodb://mongodb://127.0.0.1/todo');
+mongoose.connect('mongodb://127.0.0.1/todo');
 
 const app = express();
 

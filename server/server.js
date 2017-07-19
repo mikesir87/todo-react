@@ -5,12 +5,12 @@ import bodyParser from 'body-parser';
 import methodOverride from 'method-override';
 import router from './router';
 
-mongoose.connect('mongodb://127.0.0.1/todo');
+mongoose.connect('mongodb://mongo/todo');
 
 const app = express();
 
 // register middlerware
-app.use(express.static(`${__dirname}/public`));
+app.use(express.static(`${__dirname}/../public`));
 app.use(morgan('dev'));
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());

@@ -4,7 +4,11 @@
   "description": "todo app",
   "main": "server.js",
   "scripts": {
-    "start": "babel ./public/core.js -o ./public/core.build.js&&babel-node server.js"
+    "dev": "concurrently 'babel ./src/app.js --watch -o ./public/app.js' 'npm run server-watch'",
+    "server-watch": "babel-node server/server.js",
+    "build": "concurrently 'npm run build-client' 'npm run build-server'",
+    "build-client": "babel ./src/app.js -o ./public/app.js",
+    "build-server": "babel server --out-dir server-dist"
   },
   "author": "Francis",
   "license": "ISC",
@@ -21,8 +25,9 @@
     "babel-eslint": "^4.1.8",
     "babel-preset-es2015": "^6.3.13",
     "babel-preset-react": "^6.3.13",
-    "babel-preset-stage-0": "^6.3.13",
+    "babel-preset-stage-2": "^6.3.13",
     "babel-register": "^6.5.2",
+    "concurrently": "^3.5.0",
     "eslint": "^1.10.3"
   }
 }

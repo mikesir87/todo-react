@@ -88,15 +88,23 @@ class TodoForm extends React.Component {
   render() {
     return (
       <div className="row">
-        <div className="col-sm-8 col-sm-offset-2 text-center">
-          <form>
-             <div className="form-group">
-                <input type="text" className="form-control input-lg text-center" ref="text"
-                autofocus placeholder="I want to buy a puppy that will love me forever"/>
-              </div>
-              <button type="submit" className="btn btn-primary btn-lg"
-               onClick={this.handleSubmit.bind(this)}>Add</button>
-          </form>
+        <div className="col-sm-8 col-sm-offset-2" style={{marginTop:'50px'}}>
+
+          <div className="panel panel-primary">
+            <div className="panel-heading">
+              <h2 className="panel-title">Add an Item</h2>
+            </div>
+            <div className="panel-body">
+              <form>
+                <div className="form-group">
+                    <input type="text" className="form-control text-center" ref="text"
+                    autofocus placeholder="I want to buy a puppy that will love me forever"/>
+                  </div>
+                  <button type="submit" className="btn btn-primary btn-lg"
+                  onClick={this.handleSubmit.bind(this)}>Add</button>
+              </form>
+            </div>
+          </div>
          </div>
       </div>
     );
